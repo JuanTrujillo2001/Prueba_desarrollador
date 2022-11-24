@@ -1,0 +1,70 @@
+{% extends "base.html" %} {% block title %}Change{% endblock %} {% block content
+%}
+
+<div class="content">
+  <div data-content id="Usuario">
+    <form method="POST">
+      <h3 align="center">Usuario</h3>
+      <div class="form-group">
+        <label class = "local_inicial1" for="Nombre">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Nombre"
+          name="Nombre"
+          value="{{user.nombre}}"
+        />
+      </div>
+      <div class="form-group">
+        <label class = "local_inicial1" for="Apellido">Apellido</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Apellido"
+          name="Apellido"
+          value="{{user.apellido}}"
+        />
+      </div>
+      <div class="form-group">
+        <label class = "local_inicial1" for="localID">localizacion ID</label>
+        <input
+          type="number"
+          class="form-control"
+          id="localID"
+          name="localID"
+          value="{{user.localizacionID}}"
+        />
+      </div>
+      <div class="form-group">
+        <label class = "local_inicial1" for="CargoID">Cargo ID</label>
+        <input
+          type="number"
+          class="form-control"
+          id="Cargo"
+          name="Cargo"
+          value="{{user.cargoID}}"
+        />
+      </div>
+      <label class = "local_inicial1" for="Estado">Estado Actual {{user.estado}}</label>
+      <div class="form-check">
+        <div class="form-check">
+          <input
+            class="form-check-input Usuario_pug"
+            value="on"
+            type="checkbox"
+            id="Estado"
+            name="Estado"
+            checked
+          />
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <div class="col text-center">
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+      </div>
+    </form>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base.html" %} {% block title %}Change{% endblock %} {% block content
+%}
+<form method="POST">
+  <br />
+  <br />
+  <h3 align="center">Actualizacion Locaciones</h3>
+  <br />
+  <br />
+  <div class="container text-center">
+    <table class="table table-responsive table-hover">
+      <thead>
+        <tr>
+          <th>Nombre localizacion</th>
+          <th>Estado Actual</th>
+          <th>Actualizar</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>
+          <input
+            type="text"
+            class="form-control"
+            id="local"
+            name="local"
+            value="{{locaciones.localizacion}}"
+          />
+        </td>
+        <td>
+          <input
+            class="form-check-input"
+            value="on"
+            type="checkbox"
+            id="Estado"
+            name="Estado"
+            checked
+          />
+        </td>
+        <td>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</form>
+{% endblock %}
